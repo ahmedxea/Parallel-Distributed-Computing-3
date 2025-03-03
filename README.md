@@ -9,6 +9,3 @@
 1. **Locks (`RLock`)**: Ensures only one thread modifies `latest_temperatures` at a time.
 2. **Queue (`Queue`)**: Thread-safe communication for sensor readings.
 3. **Condition (`Condition`)**: Synchronizes access to display updates.
-
-## Why No Performance Metrics?
-The professor didn't ask for metrics because this lab focuses on **synchronization, concurrency, and real-time display handling**, rather than performance analysis.
