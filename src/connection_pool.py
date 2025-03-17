@@ -1,6 +1,6 @@
 import multiprocessing
 import time
-
+ 
 class ConnectionPool:
     """
     Simulates a pool of database connections using a semaphore to control access.
