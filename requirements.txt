@@ -1,3 +1,9 @@
+# Core dependencies
 numpy
 pandas
-matplotlib
+multiprocessing-logging
+psycopg2-binary
+sqlalchemy
+time
+random
+concurrent.futures
