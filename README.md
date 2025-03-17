@@ -8,9 +8,9 @@
 
 ---
 
-# **Part 2: Navigating the City** 
+## **Part 2: Navigating the City** 
 
-## **5. Sequential Implementation (15 pts)**  
+### **5. Sequential Implementation (15 pts)**  
 - Implemented a basic **single-car** GA to visit all nodes in the shortest distance.  
 - Used `city_distances.csv` for a **32-node** map.  
 - Functions implemented:  
@@ -18,15 +18,15 @@
   - `select_in_tournament()` – Selects the best candidates.  
 - Ran the algorithm and recorded performance.  
 
-## **6. Parallelization Using MPI (20 pts)**  
+### **6. Parallelization Using MPI (20 pts)**  
 
-### **6.1. Approach**
+#### **6.1. Approach**
 - **Distributed computation using MPI4PY**:
   - Each process calculates fitness for a subset of routes.
   - The population is scattered and updated in parallel.
   - **Speedup achieved by dividing the workload** across processes.
 
-### **6.2. Running on Multiple Machines**
+#### **6.2. Running on Multiple Machines**
 - Created a **hostfile.txt**:
 - Ran the program using:
   ```sh
@@ -35,9 +35,9 @@
 - Results: **Performance improved significantly compared to sequential execution.**
 
 
-## **7. Enhancing the Algorithm (20 pts)**  
+### **7. Enhancing the Algorithm (20 pts)**  
 
-### **7.1. Implemented Improvements**
+#### **7.1. Implemented Improvements**
  **Adaptive Mutation Rate**:  
 - Increased mutation if improvement is too slow, preventing stagnation.  
 
@@ -47,7 +47,7 @@
  **Dynamic Load Balancing**:  
 - Distributed extra individuals among MPI processes for even computation.  
 
-### **7.2. Performance Comparison**  
+#### **7.2. Performance Comparison**  
 | Version        | Execution Time | Best Route Distance |
 |---------------|---------------|----------------------|
 | Sequential    | **255.64s**    | **-1408008.0**      |
@@ -56,14 +56,14 @@
 
 **Significant performance gain in execution time and solution quality!**
 
-## **8. Large Scale Problem (10 pts)**  
+### **8. Large Scale Problem (10 pts)**  
 
-### **8.1. Running with 100 Nodes**  
+#### **8.1. Running with 100 Nodes**  
 - Switched to `city_distances_extended.csv`.  
 - Required **more iterations** and a **larger population** to find a good solution.  
 - Executed successfully **within feasible time**.
 
-### **8.2. Adding More Cars (Explanation - 5 pts)**  
+#### **8.2. Adding More Cars (Explanation - 5 pts)**  
 - **Current Model:** 1 vehicle completes all deliveries.  
 To extend the current **single-vehicle** model to multiple cars, the following modifications are needed:  
 
