@@ -1,4 +1,4 @@
-### **Assignment 1 – Part 2: Navigating the City** 
+# **Assignment 1 – Part 2: Navigating the City** 
 
 ## **5. Sequential Implementation (15 pts)**  
 - Implemented a basic **single-car** GA to visit all nodes in the shortest distance.  
@@ -7,8 +7,6 @@
   - `calculate_fitness()` – Evaluates route distance.  
   - `select_in_tournament()` – Selects the best candidates.  
 - Ran the algorithm and recorded performance.  
-
----
 
 ## **6. Parallelization Using MPI (20 pts)**  
 
@@ -20,17 +18,12 @@
 
 ### **6.2. Running on Multiple Machines**
 - Created a **hostfile.txt**:
-  ```
-  machine1 slots=4  
-  machine2 slots=4
-  ```
 - Ran the program using:
   ```sh
   mpiexec -hostfile hostfile.txt -n 8 python genetic_algorithm_trial_parallelized.py
   ```
 - Results: **Performance improved significantly compared to sequential execution.**
 
----
 
 ## **7. Enhancing the Algorithm (20 pts)**  
 
@@ -53,8 +46,6 @@
 
 **Significant performance gain in execution time and solution quality!**
 
----
-
 ## **8. Large Scale Problem (10 pts)**  
 
 ### **8.1. Running with 100 Nodes**  
@@ -64,7 +55,12 @@
 
 ### **8.2. Adding More Cars (Explanation - 5 pts)**  
 - **Current Model:** 1 vehicle completes all deliveries.  
-- **Improvement:**  
-  - Introduce **multiple vehicles**, each handling a subset of nodes.  
-  - Modify fitness function to distribute nodes among vehicles.  
-  - Use **clustering algorithms** (e.g., k-means) to group deliveries efficiently. 
+To extend the current **single-vehicle** model to multiple cars, the following modifications are needed:  
+
+1. **Route Representation** – Each chromosome should encode multiple routes, one per car, ensuring all nodes are visited without duplication.  
+2. **Fitness Function** – Evaluate total distance across all cars while penalizing missed or repeated nodes.  
+3. **Population Generation** – Distribute nodes among cars using clustering (e.g., K-Means) or heuristics.  
+4. **Crossover & Mutation** – Swap entire routes between cars and allow node reassignment between vehicles.  
+5. **Parallelization** – Assign each MPI process a subset of cars for independent route optimization.  
+
+This transforms the problem into a **Vehicle Routing Problem (VRP)**, optimizing delivery efficiency with multiple cars.
