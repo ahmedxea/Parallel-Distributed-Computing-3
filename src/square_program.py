@@ -6,7 +6,7 @@ from concurrent.futures import ProcessPoolExecutor
 # Function to compute the square of a number
 def square(n):
     return n * n
-
+ 
 # Generate lists of numbers (10^6 and 10^7)
 N1 = 10**6  # 1 million numbers
 N2 = 10**7  # 10 million numbers
