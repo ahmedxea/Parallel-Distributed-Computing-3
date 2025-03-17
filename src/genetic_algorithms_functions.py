@@ -7,7 +7,7 @@ def calculate_fitness(route, distance_matrix):
     Parameters:
         - route (list): A list representing the order of nodes visited.
         - distance_matrix (numpy.ndarray): Distance matrix of the graph.
-
+ 
     Returns:
         - float: The negative total distance traveled.
     """

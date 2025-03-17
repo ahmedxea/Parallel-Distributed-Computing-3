@@ -6,7 +6,7 @@ from genetic_algorithms_functions import calculate_fitness, \
     select_in_tournament, order_crossover, mutate, \
     generate_unique_population
 
-
+ 
 # Start timing
 start_time = time.time()
 

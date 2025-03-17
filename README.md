@@ -1,7 +1,7 @@
 # **Parallel and Distributed Computing - Assignment 1**
 
 ## **Part 2: Navigating the City** 
-
+ 
 ### **5. Sequential Implementation (15 pts)**  
 - Implemented a basic **single-car** GA to visit all nodes in the shortest distance.  
 - Used `city_distances.csv` for a **32-node** map.  

@@ -6,7 +6,7 @@ import time
 from genetic_algorithms_functions import calculate_fitness, \
     select_in_tournament, order_crossover, mutate, \
     generate_unique_population
-
+ 
 # MPI setup
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
