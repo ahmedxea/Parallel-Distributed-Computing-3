@@ -8,7 +8,7 @@ class ConnectionPool:
     def __init__(self, max_connections):
         """
         Initializes the pool with a limited number of connections.
-        
+         
         Parameters:
         - max_connections (int): The number of available connections.
         """
