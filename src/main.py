@@ -2,7 +2,7 @@ import multiprocessing
 from connection_pool import ConnectionPool
 from database_operations import access_database
 
-def main():
+def main(): 
     max_connections = 3  # Limit database connections
     pool = ConnectionPool(max_connections)  # Initialize connection pool
 
