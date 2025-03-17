@@ -4,7 +4,7 @@ import random
 def access_database(pool, process_id):
     """
     Simulates a process performing a database operation.
-    
+     
     Parameters:
     - pool (ConnectionPool): The shared connection pool.
     - process_id (int): The ID of the process.
