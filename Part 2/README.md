@@ -1,26 +1,4 @@
-### **Assignment 1 – Part 2: Navigating the City**  
-
-## **1. Objectives**  
-The goal of this assignment is to implement a **Genetic Algorithm (GA)** for solving an optimization problem in a city navigation scenario. The implementation involves:  
-- Developing a sequential version of the genetic algorithm.
-- Parallelizing the algorithm using **MPI4PY** for distributed execution.
-- Enhancing the algorithm for improved performance.
-- Running the algorithm on an extended city map with 100 nodes.
-
-## **4. Genetic Algorithm Overview**  
-
-### **4.1. What is a Genetic Algorithm?**  
-A Genetic Algorithm (GA) is an optimization technique inspired by natural selection. It evolves solutions through selection, crossover, and mutation to minimize the total distance of a delivery route.
-
-### **4.2. Basic Steps of GA in This Problem**  
-1. **Initialize**: Generate a random population of delivery routes.  
-2. **Evaluate**: Compute the fitness (total distance) for each route.  
-3. **Selection**: Choose the best-performing routes.  
-4. **Crossover**: Create new routes by recombining parents.  
-5. **Mutation**: Introduce random changes for diversity.  
-6. **Repeat**: Iterate until reaching a stopping criterion.
-
----
+### **Assignment 1 – Part 2: Navigating the City** 
 
 ## **5. Sequential Implementation (15 pts)**  
 - Implemented a basic **single-car** GA to visit all nodes in the shortest distance.  
@@ -57,13 +35,13 @@ A Genetic Algorithm (GA) is an optimization technique inspired by natural select
 ## **7. Enhancing the Algorithm (20 pts)**  
 
 ### **7.1. Implemented Improvements**
-✔️ **Adaptive Mutation Rate**:  
+ **Adaptive Mutation Rate**:  
 - Increased mutation if improvement is too slow, preventing stagnation.  
 
-✔️ **Smarter Population Regeneration**:  
+ **Smarter Population Regeneration**:  
 - Instead of random resets, kept the top 10% of solutions to preserve good candidates.  
 
-✔️ **Dynamic Load Balancing**:  
+ **Dynamic Load Balancing**:  
 - Distributed extra individuals among MPI processes for even computation.  
 
 ### **7.2. Performance Comparison**  
@@ -73,7 +51,7 @@ A Genetic Algorithm (GA) is an optimization technique inspired by natural select
 | Parallelized  | **187.48s**    | **-1508355.0**      |
 | Improved      | **39.07s**     | **-1809505.0**      |
 
-✅ **Significant performance gain in execution time and solution quality!**
+**Significant performance gain in execution time and solution quality!**
 
 ---
 
